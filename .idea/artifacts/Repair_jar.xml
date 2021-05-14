@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact name="Repair:jar">
+    <output-path>$USER_HOME$/Desktop/sv2/plugins</output-path>
+    <root id="root">
+      <element id="archive" name="Repair.jar">
+        <element id="module-output" name="TamirEt" />
+      </element>
+      <element id="file-copy" path="$USER_HOME$/Desktop/Vault.jar" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/spigot.jar" />
+    </root>
+  </artifact>
+</component>

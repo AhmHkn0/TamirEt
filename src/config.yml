@@ -1,0 +1,16 @@
+ayarlar:
+    giyilenzirhlar: false #Full tamirde giyilen zırhlar tamir edilsin mi?
+    eltamircost: 50 #Oyuncuların ellerindeki eşyayı tamir etmek için ödemesi gereken ücret.
+    fulltamircost: 100  #Oyuncuların bütün envanterini tamir etmesi için ödemesi gereken ücret.
+
+mesajlar:
+  prefix: "&f[&6TamirEt&f] "
+
+  yetkisiz: "&cBu komutu kullanmak için yetki sahibi değilsin."
+  yetersizbakiye: "&cTamir etmek için yeterli bakiyen bulunmuyor."
+  tamiredildi: "&aElindeki eşya başarıyla tamir edildi."
+  fulltamiredildi: "&aGiyilen zırhlar hariç envanterindeki bütün eşyalar tamir edildi."
+  fulltamiredildigiyilenzirhlar: "&aGiyilen zırhlar dahil envanterindeki bütün eşyalar tamir edildi."
+  tamiredilemez: "&cElindeki eşya tamir edilebilecek bir eşya değil!"
+  hasarsiz: "&cElindeki eşya hasarsız olduğu için tamire ihtiyacı yok."
+  reload: "&aPlugin dosyaları yeniden yüklendi."
