@@ -2,7 +2,7 @@ settings:
     locale: en #You can change language Only "en" and "tr" / Pluginin dilini değiştirebilirsiniz. Yalnızca "en" ve "tr" destekliyor.
     armors: true #Should armor in usage in full repair be repaired? / Full tamirde giyilen zırhlar tamir edilsin mi?
     handrepaircost: 5000 #The price a player must pay to repair an item. / Oyuncuların ellerindeki eşyayı tamir etmek için ödemesi gereken ücret.
-    allrepaircost: 250000  #The price players must pay to repair all of their inventory. / Oyuncuların bütün envanterini tamir etmesi için ödemesi gereken ücret.
+    allrepaircost: 250000 #The price players must pay to repair all of their inventory. / Oyuncuların bütün envanterini tamir etmesi için ödemesi gereken ücret.
 
 prefix: "&f[&6TamirEt&f] "
 

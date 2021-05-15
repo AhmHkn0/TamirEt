@@ -1,4 +1,4 @@
-package me.AhmHkn.Repair;
+package me.AhmHkn.RepairIt;
 
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.economy.EconomyResponse;
@@ -11,7 +11,7 @@ import org.bukkit.plugin.RegisteredServiceProvider;
 
 import static org.bukkit.Bukkit.getServer;
 
-public class Repair implements CommandExecutor {
+public class RepairIt implements CommandExecutor {
     public static Economy econ = null;
 
 
@@ -57,7 +57,7 @@ public class Repair implements CommandExecutor {
                 }else if (args[0].equalsIgnoreCase("hepsi") || args[0].equalsIgnoreCase("all")){
                         EconomyResponse r = econ.withdrawPlayer(p, Main.allrepaircost());
                         if (r.transactionSuccess()) {
-                            if (!Main.plugin.getConfig().getBoolean("settings.giyilenzirhlar")) {
+                            if (!Main.plugin.getConfig().getBoolean("settings.armors")) {
                                 Main.msg(p, Main.locale + ".messages.fulltamiredildi");
                                 for (int i = 0; i <= 35; i++) {
                                     try {
