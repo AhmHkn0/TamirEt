@@ -1,7 +1,7 @@
 name: RepairIt
 description: It is an plugin that repairs items used or all inventory by players for a price.
 main: me.AhmHkn.RepairIt.Main
-version: 1.5
+version: 2.0
 author: AhmHkn
 depend:
   - Vault

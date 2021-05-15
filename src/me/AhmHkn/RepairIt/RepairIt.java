@@ -40,12 +40,17 @@ public class RepairIt implements CommandExecutor {
                     } else if (args[0].equalsIgnoreCase("el") || args[0].equalsIgnoreCase("hand") || args[0].equalsIgnoreCase("et")){
                         if (p.getItemInHand().getType().getMaxDurability() != 0) {
                             if (p.getItemInHand().getDurability() > 0) {
-                                EconomyResponse r = econ.withdrawPlayer(p, Main.handrepaircost());
-                                if (r.transactionSuccess()) {
+                                if (!sender.hasPermission("repairit.hand")) {
+                                    EconomyResponse r = econ.withdrawPlayer(p, Main.handrepaircost());
+                                    if (r.transactionSuccess()) {
+                                        p.getInventory().getItemInHand().setDurability((short) 0);
+                                        Main.msg(p, Main.locale + ".messages.tamiredildi");
+                                    } else {
+                                        Main.msg(p, Main.locale + ".messages.yetersizbakiye");
+                                    }
+                                } else{
                                     p.getInventory().getItemInHand().setDurability((short) 0);
                                     Main.msg(p, Main.locale + ".messages.tamiredildi");
-                                } else {
-                                    Main.msg(p, Main.locale + ".messages.yetersizbakiye");
                                 }
                             } else {
                                 Main.msg(p, Main.locale + ".messages.hasarsiz");
@@ -55,8 +60,37 @@ public class RepairIt implements CommandExecutor {
                             return true;
                         }
                 }else if (args[0].equalsIgnoreCase("hepsi") || args[0].equalsIgnoreCase("all")){
-                        EconomyResponse r = econ.withdrawPlayer(p, Main.allrepaircost());
-                        if (r.transactionSuccess()) {
+                        if (!sender.hasPermission("repairit.all")) {
+                            EconomyResponse r = econ.withdrawPlayer(p, Main.allrepaircost());
+                            if (r.transactionSuccess()) {
+                                if (!Main.plugin.getConfig().getBoolean("settings.armors")) {
+                                    Main.msg(p, Main.locale + ".messages.fulltamiredildi");
+                                    for (int i = 0; i <= 35; i++) {
+                                        try {
+                                            if (p.getInventory().getItem(i).getType().getMaxDurability() != 0) {
+                                                p.getInventory().getItem(i).setDurability((short) 0);
+                                            }
+                                        } catch (Exception ignored) {
+
+                                        }
+                                    }
+                                } else if (Main.plugin.getConfig().getBoolean("settings.armors")) {
+                                    Main.msg(p, Main.locale + ".messages.fulltamiredildigiyilenzirhlar");
+                                    for (int i = 0; i <= 39; i++) {
+                                        try {
+                                            if (p.getInventory().getItem(i).getType().getMaxDurability() != 0) {
+                                                p.getInventory().getItem(i).setDurability((short) 0);
+                                            }
+                                        } catch (Exception ignored) {
+
+                                        }
+                                    }
+                                }
+
+                            } else {
+                                Main.msg(p, Main.locale + ".messages.yetersizbakiye");
+                            }
+                        }else{
                             if (!Main.plugin.getConfig().getBoolean("settings.armors")) {
                                 Main.msg(p, Main.locale + ".messages.fulltamiredildi");
                                 for (int i = 0; i <= 35; i++) {
@@ -80,8 +114,6 @@ public class RepairIt implements CommandExecutor {
                                     }
                                 }
                             }
-                        }else{
-                            Main.msg(p, Main.locale + ".messages.yetersizbakiye");
                         }
                     }else if (args[0].equalsIgnoreCase("reload")) {
                         if (p.isOp()) {
