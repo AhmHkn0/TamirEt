@@ -15,19 +15,15 @@ public final class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         plugin = this;
+        this.saveDefaultConfig();
         locale = Main.plugin.getConfig().getString("settings.locale");
         if (!locale.equalsIgnoreCase("tr") || !locale.equalsIgnoreCase("en")) {
             getServer().getConsoleSender().sendMessage(ChatColor.RED + "Unable locale. Only supports: 'tr' and 'en'");
         }
-        this.saveDefaultConfig();
         this.getCommand("tamir").setExecutor(new RepairIt());
         this.getCommand("repair").setExecutor(new RepairIt());
         getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "TamirEt enabled.");
 
-    }
-    public void onDisable() {
-        this.saveConfig();
-        getServer().getConsoleSender().sendMessage(ChatColor.RED + "[TamirEt] Config saved.");
     }
     public static void msg(Player p, String cfg) {
         p.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("prefix")) + ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString(cfg)));
