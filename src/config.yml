@@ -1,16 +1,29 @@
-ayarlar:
-    giyilenzirhlar: false #Full tamirde giyilen zırhlar tamir edilsin mi?
-    eltamircost: 50 #Oyuncuların ellerindeki eşyayı tamir etmek için ödemesi gereken ücret.
-    fulltamircost: 100  #Oyuncuların bütün envanterini tamir etmesi için ödemesi gereken ücret.
+settings:
+    locale: en #You can change language Only "en" and "tr" / Pluginin dilini değiştirebilirsiniz. Yalnızca "en" ve "tr" destekliyor.
+    armors: true #Should armor in usage in full repair be repaired? / Full tamirde giyilen zırhlar tamir edilsin mi?
+    handrepaircost: 5000 #The price a player must pay to repair an item. / Oyuncuların ellerindeki eşyayı tamir etmek için ödemesi gereken ücret.
+    allrepaircost: 250000  #The price players must pay to repair all of their inventory. / Oyuncuların bütün envanterini tamir etmesi için ödemesi gereken ücret.
 
-mesajlar:
-  prefix: "&f[&6TamirEt&f] "
+prefix: "&f[&6TamirEt&f] "
 
-  yetkisiz: "&cBu komutu kullanmak için yetki sahibi değilsin."
-  yetersizbakiye: "&cTamir etmek için yeterli bakiyen bulunmuyor."
-  tamiredildi: "&aElindeki eşya başarıyla tamir edildi."
-  fulltamiredildi: "&aGiyilen zırhlar hariç envanterindeki bütün eşyalar tamir edildi."
-  fulltamiredildigiyilenzirhlar: "&aGiyilen zırhlar dahil envanterindeki bütün eşyalar tamir edildi."
-  tamiredilemez: "&cElindeki eşya tamir edilebilecek bir eşya değil!"
-  hasarsiz: "&cElindeki eşya hasarsız olduğu için tamire ihtiyacı yok."
-  reload: "&aPlugin dosyaları yeniden yüklendi."
+en:
+  messages:
+    yetkisiz: "&cYou are not authorized to use this command."
+    yetersizbakiye: "&cYou do not have enough funds to repair it."
+    tamiredildi: "&aThe items used were repaired."
+    fulltamiredildi: "&aAll items in your inventory have been repaired, except the armors."
+    fulltamiredildigiyilenzirhlar: "&aAll items in your inventory have been repaired, including the armors."
+    tamiredilemez: "&cThe item in your hand is not an item that can be repaired!"
+    hasarsiz: "&cThe item in your hand does not need repair."
+    reload: "&aPlugin files have been reinstalled."
+
+tr:
+  messages:
+    yetkisiz: "&cBu komutu kullanmak için yetki sahibi değilsin."
+    yetersizbakiye: "&cTamir etmek için yeterli bakiyen bulunmuyor."
+    tamiredildi: "&aElindeki eşya başarıyla tamir edildi."
+    fulltamiredildi: "&aGiyilen zırhlar hariç envanterindeki bütün eşyalar tamir edildi."
+    fulltamiredildigiyilenzirhlar: "&aGiyilen zırhlar dahil envanterindeki bütün eşyalar tamir edildi."
+    tamiredilemez: "&cElindeki eşya tamir edilebilecek bir eşya değil!"
+    hasarsiz: "&cElindeki eşya hasarsız olduğu için tamire ihtiyacı yok."
+    reload: "&aPlugin dosyaları yeniden yüklendi."

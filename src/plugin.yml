@@ -1,10 +1,16 @@
 name: TamirEt
-description: Ücretli bir şekilde oyuncuların eşyalarını tamir edilmesini sağlayan plugindir.
+description: Ücretli bir şekilde oyuncuların eşyalarını tamir edilmesini sağlayan eklentidir.
 main: me.AhmHkn.Repair.Main
-version: 1.0
+version: 1.3
 author: AhmHkn
 depend:
   - Vault
 commands:
   tamir:
     description: Pluginin genel komutudur.
+  tamiret:tamir:
+    description: Pluginin genel komutudur.
+  repair:
+    description: Plugin's command.
+  tamiret:repair:
+    description: Plugin's command.
