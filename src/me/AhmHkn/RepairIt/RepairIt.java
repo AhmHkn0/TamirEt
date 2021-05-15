@@ -19,7 +19,7 @@ public class RepairIt implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
         RegisteredServiceProvider<Economy> rsp = getServer().getServicesManager().getRegistration(Economy.class);
         econ = rsp.getProvider();
-        if (s.equalsIgnoreCase("tamir") || s.equalsIgnoreCase("tamiret:tamir") || s.equalsIgnoreCase("repair") || s.equalsIgnoreCase("tamiret:repair")) {
+        if (s.equalsIgnoreCase("tamir") || s.equalsIgnoreCase("repairit:tamir") || s.equalsIgnoreCase("repair") || s.equalsIgnoreCase("repairit:repair")) {
             if (sender instanceof Player) {
                 Player p = (Player) sender;
                 {
