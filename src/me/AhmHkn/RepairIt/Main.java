@@ -6,7 +6,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.command.CommandSender;
 
 
-
 public final class Main extends JavaPlugin {
 
     public static Main plugin;
@@ -17,7 +16,7 @@ public final class Main extends JavaPlugin {
         plugin = this;
         this.saveDefaultConfig();
         locale = Main.plugin.getConfig().getString("settings.locale");
-        if (!locale.equalsIgnoreCase("tr") || !locale.equalsIgnoreCase("en")) {
+        if (!locale.equalsIgnoreCase("tr") && !locale.equalsIgnoreCase("en")) {
             getServer().getConsoleSender().sendMessage(ChatColor.RED + "Unable locale. Only supports: 'tr' and 'en'");
         }
         this.getCommand("tamir").setExecutor(new RepairIt());
